@@ -1,27 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            storeFile file('Your jks file')
-            storePassword 'Your Password'
-        }
-    }
-    compileSdkVersion 21
-    buildToolsVersion "22.0.0"
+    compileSdkVersion 22
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "ruben.nexus4usbcharging"
         minSdkVersion 21
-        targetSdkVersion 16
-        versionCode 1
-        versionName "1.0"
-        signingConfig signingConfigs.config
+        targetSdkVersion 22
+        versionCode 2
+        versionName "1.0.1"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
             debuggable false
             zipAlignEnabled true
         }

@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.view.View;
 
 import java.io.DataOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -40,11 +39,9 @@ public class MainActivity extends ActionBarActivity {
                     outputStream.flush();
                     su.waitFor();
 
-                    txt.setText("USB CHARGING ENABLED!");
+                    txt.setText(R.string.usbEnabled);
                 } catch (IOException e) {
-                    txt.setText("Oops! The following exception happened: \n\n" +
-                                e.getMessage() + "\n\n" +
-                                "Remember, your device must be rooted.");
+                    txt.setText(String.format("%s\n\n%s\n\n%s", getString(R.string.exception), e.getMessage(), getString(R.string.rootRequired)));
                 } catch (InterruptedException e) {
                     txt.setText(e.getMessage());
                 }
@@ -65,11 +62,9 @@ public class MainActivity extends ActionBarActivity {
                     outputStream.flush();
                     su.waitFor();
 
-                    txt.setText("USB CHARGING DISABLED!");
+                    txt.setText(R.string.usbDisabled);
                 } catch (IOException e) {
-                    txt.setText("Oops! The following exception happened: \n\n" +
-                                e.getMessage() + "\n\n" +
-                                "Remember, your device must be rooted.");
+                    txt.setText(String.format("%s\n\n%s\n\n%s", getString(R.string.exception), e.getMessage(), getString(R.string.rootRequired)));
                 } catch (InterruptedException e) {
                     txt.setText(e.getMessage());
                 }

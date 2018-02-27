@@ -3,4 +3,11 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="usbEnabled">USB CHARGING ENABLED!</string>
+    <string name="usbDisabled">USB CHARGING DISABLED!</string>
+    <string name="rootRequired">Remember, your device must be rooted.</string>
+    <string name="exception">Oops! The following exception happened:</string>
+    <string name="infoAboutButtons">PRESS THE BUTTON BELOW</string>
+    <string name="buttonDisableUSB">DISABLE USB CHARGING</string>
+    <string name="buttonEnableUSB">ENABLE USB CHARGING</string>
 </resources>
